@@ -15,7 +15,7 @@ public class LeaseDao {
     }
 
     public void addLeaseContract(LeaseContract leaseContract) {
-       String sql = "INSERT INTO lease_contracts (contract_id, vin, lease_start_date, lease_end_date, monthly_payment) VALUES (?, ?, ?, ?, ?, ?)";
+       String sql = "INSERT INTO lease_contracts (contract_id, vin, lease_start_date, lease_end_date, monthly_payment) VALUES (?, ?, ?, ?, ?)";
 
         try (Connection connection = dataSource.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
