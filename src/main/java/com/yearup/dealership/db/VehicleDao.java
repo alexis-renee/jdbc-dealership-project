@@ -110,18 +110,15 @@ public class VehicleDao {
 
                         Vehicle vehicle = new Vehicle(vin, year, sold, color, type, odometer, price);
                         vehicles.add(vehicle);
-
-
+                        
                     }
                 }
             } catch (SQLException e) {
                 System.err.println("Error executing SQL query: " + e.getMessage());
             }
 
-        }
     }
-
-    public List<Vehicle> searchByYearRange(int minYear, int maxYear) {
+    public List<Vehicle> searchByYearRange(int minYear, int maxYear){
         List<Vehicle> vehicles = new ArrayList<>();
         String query = "SELECT * FROM vehicles WHERE year BETWEEN ? AND ?";
 
