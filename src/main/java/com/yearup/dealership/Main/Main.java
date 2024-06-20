@@ -18,10 +18,6 @@ import java.util.UUID;
 
 public class Main {
     public static void main(String[] args) {
-        if (args.length < 2) {
-            System.out.println("Enter your Username and Password to Run the Application ");
-            return;
-        }
         String username = args[0];
         String password = args[1];
 
